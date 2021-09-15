@@ -14,11 +14,34 @@ Heroku
 
 ## Technologies used
 
+Front end:
+
+- JavaScript
+
+- React 
+
+- Bootstrap
+
+- HTML
+
+- CSS
+
+
+Back end:
+
+- Python
+
+- Django
+
+- SQL
+
+[Schema/Technologies](https://imgur.com/YeeZCCU)
+
 ## Link to Wireframes
 
-[Wireframe with Balsamiq]()
-
 [Basic wireframe](https://imgur.com/7MmTdco)
+
+[Wireframe with Balsamiq]()
 
 ## User Stories
 
