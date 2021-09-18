@@ -11,6 +11,7 @@
     "axios": "^0.21.4",
     "bootstrap": "^5.0.2",
     "chalk": "^2.4.2",
+    "cloudinary-react": "^1.7.0",
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
     "fs-extra": "^9.1.0",
