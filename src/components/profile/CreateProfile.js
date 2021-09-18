@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
 // import axios from 'axios'
+// import axios from 'axios'
 import { createProfile } from '../../api/profile'
 
 import Form from 'react-bootstrap/Form'
@@ -28,6 +29,19 @@ class CreateProfile extends Component {
 	  })
 	}
 
+	handleImageChange = (event) => {
+	  this.setState({
+	    image: event.target.files[0]
+	  })
+	  console.log('THESE ARE THE FILES', event.target.files[0])
+	}
+
+	handleSubmit = (files) => {
+	  const formData = new FormData()
+	  formData.append('file', files[0])
+	  console.log('These are the files!!!!', files)
+	}
+
 	onCreateProfile = (e) => {
 	  e.preventDefault()
 	  const { msgAlert, history, user } = this.props
@@ -45,7 +59,7 @@ class CreateProfile extends Component {
 	        variant: 'success'
 	      })
 	    )
-	    .then(() => history.push('/'))
+	    .then(() => history.push('/userprofile'))
 	    .catch((error) => {
 	      this.setState({ name: '', age: '', breed: '', bio: '', image: '' })
 	      msgAlert({
@@ -116,10 +130,10 @@ class CreateProfile extends Component {
 	            <Form.Control
 	              required
 	              name='image'
-	              type='text'
+	              type='file'
 	              id='image'
 	              placeholder='Image'
-	              onChange={this.handleChange}
+	              onChange={this.handleImageChange}
 	            />
 	          </Form.Group>
 	          <Button variant='primary' type='submit'>
