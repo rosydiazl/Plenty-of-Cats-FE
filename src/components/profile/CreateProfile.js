@@ -18,8 +18,7 @@ class CreateProfile extends Component {
       name: '',
       age: '',
       breed: '',
-      bio: '',
-      image: ''
+      bio: ''
     }
   }
 
@@ -29,42 +28,30 @@ class CreateProfile extends Component {
 	  })
 	}
 
-	handleImageChange = (event) => {
-	  this.setState({
-	    image: event.target.files[0]
-	  })
-	  console.log('THESE ARE THE FILES', event.target.files[0])
-	}
-
-	handleSubmit = (files) => {
-	  const formData = new FormData()
-	  formData.append('file', files[0])
-	  console.log('These are the files!!!!', files)
-	}
-
 	onCreateProfile = (e) => {
 	  e.preventDefault()
+
 	  const { msgAlert, history, user } = this.props
 	  // console.log('This state is', this.state)
 	  // console.log('These are props', this.props)
 
 	  createProfile(this.state, user)
 	    .then((res) => {
-	      console.log('Res data is', res.data)
+	     // console.log('Res data is', res.data)
 	    })
 	    .then(() =>
 	      msgAlert({
-	        heading: 'Create Profile',
-	        message: 'Create Profile SuccessFully',
+	        heading: 'Success',
+	        message: 'Profile created successfully!',
 	        variant: 'success'
 	      })
 	    )
-	    .then(() => history.push('/userprofile'))
+	    .then(() => history.push('/'))
 	    .catch((error) => {
-	      this.setState({ name: '', age: '', breed: '', bio: '', image: '' })
+	      this.setState({ name: '', age: '', breed: '', bio: '' })
 	      msgAlert({
-	        heading: 'Create Profile Failed with error: ' + error.message,
-	        message: 'Unable to create profile.',
+	        heading: 'Unable to create profile. Error: ' + error.message,
+	        message: 'Create Profile failed.',
 	        variant: 'danger'
 	      })
 	    })
@@ -83,6 +70,7 @@ class CreateProfile extends Component {
 	              value={this.state.name}
 	              type='text'
 	              placeholder='Name'
+	              style={{ marginBottom: '10px' }}
 	              onChange={this.handleChange}
 	            />
 	          </Form.Group>
@@ -93,6 +81,7 @@ class CreateProfile extends Component {
 	              value={this.state.age}
 	              type='number'
 	              placeholder='Age'
+	              style={{ marginBottom: '10px' }}
 	              onChange={this.handleChange}
 	            />
 	          </Form.Group>
@@ -102,6 +91,7 @@ class CreateProfile extends Component {
 	              required
 	              name='breed'
 	              value={this.state.breed}
+	              style={{ marginBottom: '10px' }}
 	              onChange={this.handleChange}>
 	              <option>Breed</option>
 	              <option value='1'>Russian Blue</option>
@@ -123,17 +113,8 @@ class CreateProfile extends Component {
 	              value={this.state.bio}
 	              type='textarea'
 	              placeholder='Bio'
+	              style={{ height: '100px', marginBottom: '10px' }}
 	              onChange={this.handleChange}
-	            />
-	          </Form.Group>
-	          <Form.Group>
-	            <Form.Control
-	              required
-	              name='image'
-	              type='file'
-	              id='image'
-	              placeholder='Image'
-	              onChange={this.handleImageChange}
 	            />
 	          </Form.Group>
 	          <Button variant='primary' type='submit'>
