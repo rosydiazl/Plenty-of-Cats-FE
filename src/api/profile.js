@@ -5,7 +5,7 @@ export const createProfile = (profile, user) => {
   // console.log('this is user in createProfile', user)
   // console.log('this is profile in createProfile', profile)
   return axios({
-    url: apiUrl + '/profiles/',
+    url: apiUrl + '/userprofile/',
     method: 'POST',
     headers: {
       Authorization: `Token ${user.token}`
@@ -15,15 +15,14 @@ export const createProfile = (profile, user) => {
         name: profile.name,
         age: profile.age,
         breed: profile.breed,
-        bio: profile.bio,
-        image: profile.image
+        bio: profile.bio
       }
     }
   })
 }
 
 export const indexUserProfile = (user) => {
-  console.log('this is user in createProfile', user)
+  // console.log('this is user in createProfile', user)
   // console.log('this is profile in createProfile', profile)
   return axios({
     url: apiUrl + '/userprofile/',
@@ -45,10 +44,10 @@ export const indexProfile = (user) => {
   })
 }
 
-export const showProfile = (user, id) => {
+export const deleteProfile = (id, user) => {
   return axios({
-    url: apiUrl + '/profiles/' + id,
-    method: 'get',
+    url: apiUrl + '/userprofile/' + id,
+    method: 'DELETE',
     headers: {
       Authorization: `Token ${user.token}`
     }
