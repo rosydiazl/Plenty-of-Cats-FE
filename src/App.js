@@ -91,7 +91,7 @@ class App extends Component {
           />
           <AuthenticatedRoute
             user={user}
-            path='/profiles'
+            path='/userprofile'
             render={() => (
               <CreateProfile msgAlert={this.msgAlert} user={user} />
             )}
@@ -104,7 +104,7 @@ class App extends Component {
           />
           <AuthenticatedRoute
             user={user}
-            path='/profiles'
+            path='/userprofile'
             render={() => <ShowProfile msgAlert={this.msgAlert} user={user} />}
           />
         </main>
