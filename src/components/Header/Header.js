@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link, NavLink } from 'react-router-dom'
 
+import favicon from '../../../src/favicon.png'
+
 const authenticatedOptions = (
   <Fragment>
     <NavLink to='/userprofile' className='nav-link'>
@@ -30,13 +32,16 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <Fragment>
-    <NavLink to='/profiles' className='nav-link'>Home</NavLink>
+    <NavLink to='/profiles' className='nav-link'>
+			Home
+    </NavLink>
   </Fragment>
 )
 
 const Header = ({ user }) => (
-  <Navbar bg='primary' variant='dark' expand='md'>
+  <Navbar bg='dark' variant='dark' expand='md'>
     <Navbar.Brand>
+      <img src={favicon} alt="Favicon" />
       <Link to='/' style={{ color: '#FFF', textDecoration: 'none' }}>
 				Plenty of Cats
       </Link>
