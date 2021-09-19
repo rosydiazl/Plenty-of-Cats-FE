@@ -24,8 +24,8 @@ class IndexProfile extends Component {
       })
       .then(() =>
         msgAlert({
-          heading: 'Success',
-          message: 'Here are the profiles!',
+          heading: 'Profiles',
+          message: 'Here are all the profiles!',
           variant: 'success'
         })
       )
@@ -61,7 +61,7 @@ class IndexProfile extends Component {
           <Card.Body>
             <Card.Title>{profile.name}</Card.Title>
             <Image
-              style={{ width: 260 }}
+              style={{ width: 257 }}
               cloudName='doz8kotw7'
               publicId='https://res.cloudinary.com/doz8kotw7/image/upload/v1631985746/jqaomhzzofunvjn6jzt4.jpg'
             />

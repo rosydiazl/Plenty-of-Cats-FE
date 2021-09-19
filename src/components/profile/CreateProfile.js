@@ -46,7 +46,7 @@ class CreateProfile extends Component {
 	        variant: 'success'
 	      })
 	    )
-	    .then(() => history.push('/'))
+	    .then(() => history.push('/profiles'))
 	    .catch((error) => {
 	      this.setState({ name: '', age: '', breed: '', bio: '' })
 	      msgAlert({

@@ -13,6 +13,7 @@ import ChangePassword from './components/auth/ChangePassword'
 import CreateProfile from './components/profile/CreateProfile'
 import IndexProfile from './components/profile/IndexProfile'
 import ShowProfile from './components/profile/ShowProfile'
+import UpdateProfile from './components/profile/UpdateProfile'
 
 class App extends Component {
   constructor (props) {
@@ -91,6 +92,13 @@ class App extends Component {
           />
           <AuthenticatedRoute
             user={user}
+            exact
+            path='/userprofile'
+            render={() => <ShowProfile msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            user={user}
+            exact
             path='/userprofile'
             render={() => (
               <CreateProfile msgAlert={this.msgAlert} user={user} />
@@ -99,13 +107,16 @@ class App extends Component {
           <AuthenticatedRoute
             user={user}
             exact
-            path='/'
+            path='/profiles'
             render={() => <IndexProfile msgAlert={this.msgAlert} user={user} />}
           />
           <AuthenticatedRoute
             user={user}
-            path='/userprofile'
-            render={() => <ShowProfile msgAlert={this.msgAlert} user={user} />}
+            exact
+            path='/userprofile/:id/update'
+            render={() => (
+              <UpdateProfile msgAlert={this.msgAlert} user={user} />
+            )}
           />
         </main>
       </Fragment>
