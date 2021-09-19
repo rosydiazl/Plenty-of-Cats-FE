@@ -14,6 +14,7 @@ import CreateProfile from './components/profile/CreateProfile'
 import IndexProfile from './components/profile/IndexProfile'
 import ShowProfile from './components/profile/ShowProfile'
 import UpdateProfile from './components/profile/UpdateProfile'
+import pic from './pic.webp'
 
 class App extends Component {
   constructor (props) {
@@ -124,9 +125,7 @@ class App extends Component {
             render={() => (
               <img
                 className='pic'
-                src={
-                  'https://ae01.alicdn.com/kf/HTB1Pn0GKFXXXXXCapXXq6xXFXXX9/15-15CM-Play-The-Two-Pet-Cats-Personality-Car-Sticker-Cute-Animal-Classic-Window-Decorative-Decals.jpg'
-                }
+                src={pic}
                 alt='Pic'
                 style={
                   { float: 'left', margin: 0, padding: 0 }
