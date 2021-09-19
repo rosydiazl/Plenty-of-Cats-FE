@@ -53,3 +53,24 @@ export const deleteProfile = (id, user) => {
     }
   })
 }
+
+export const updateProfile = (profile, id, user) => {
+  console.log('This is user', user)
+  console.log('This is profile', profile)
+  console.log('This is ID', id)
+  return axios({
+    url: apiUrl + '/userprofile/' + id + '/',
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token ${user.token}`
+    },
+    data: {
+      profile: {
+        name: profile.name,
+        age: profile.age,
+        breed: profile.breed,
+        bio: profile.bio
+      }
+    }
+  })
+}
