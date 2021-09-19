@@ -67,7 +67,9 @@ class IndexProfile extends Component {
             />
             <Card.Text>{profile.age}</Card.Text>
             <Card.Text>{profile.breed}</Card.Text>
-            <Card.Text>{profile.bio}</Card.Text>
+            <Card.Text style={{ fontFamily: 'Satisfy', fontSize: '25px' }}>
+              {profile.bio}
+            </Card.Text>
             <Button variant='success'>Purr</Button>
             <Button variant='dark'>Hiss</Button>
           </Card.Body>
