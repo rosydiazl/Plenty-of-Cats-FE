@@ -89,9 +89,7 @@ class ShowProfile extends Component {
 	    // I want movieJsx to be a bunch of li or Link or something with all my movies info in them
 	    // .map gives us back a new array that we can display
 	    profileJsx = this.state.userprofile.map((profile) => (
-	      <Card
-	        key={profile.id}
-	        style={{ width: '18rem', marginTop: '40px' }}>
+	      <Card key={profile.id} style={{ width: '18rem', marginTop: '40px' }}>
 	        <Card.Body>
 	          <Card.Title>{profile.name}</Card.Title>
 	          <Image
@@ -101,7 +99,9 @@ class ShowProfile extends Component {
 	          />
 	          <Card.Text>{profile.age}</Card.Text>
 	          <Card.Text>{profile.breed}</Card.Text>
-	          <Card.Text>{profile.bio}</Card.Text>
+	          <Card.Text style={{ fontFamily: 'Satisfy', fontSize: '25px' }}>
+	            {profile.bio}
+	          </Card.Text>
 	          <Button
 	            variant='dark'
 	            onClick={() => history.push(`/userprofile/${profile.id}/update`)}>
