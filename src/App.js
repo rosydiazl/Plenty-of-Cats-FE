@@ -118,6 +118,22 @@ class App extends Component {
               <UpdateProfile msgAlert={this.msgAlert} user={user} />
             )}
           />
+          <Route
+            exact
+            path='/'
+            render={() => (
+              <img
+                className='pic'
+                src={
+                  'https://ae01.alicdn.com/kf/HTB1Pn0GKFXXXXXCapXXq6xXFXXX9/15-15CM-Play-The-Two-Pet-Cats-Personality-Car-Sticker-Cute-Animal-Classic-Window-Decorative-Decals.jpg'
+                }
+                alt='Pic'
+                style={
+                  { float: 'left', margin: 0, padding: 0 }
+                }
+              />
+            )}
+          />
         </main>
       </Fragment>
     )
