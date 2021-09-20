@@ -10,11 +10,7 @@ Users can also change their passwords and sign out.
 
 ## Link to repositories
 
-Front end:
-
 [Front end repo](https://github.com/rosydiazl/Plenty-of-Cats-FE)
-
-Back end:
 
 [Back end repo](https://github.com/rosydiazl/Plenty-of-Cats-BE)
 
