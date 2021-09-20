@@ -15,6 +15,7 @@ import IndexProfile from './components/profile/IndexProfile'
 import ShowProfile from './components/profile/ShowProfile'
 import UpdateProfile from './components/profile/UpdateProfile'
 import pic from './pic.webp'
+import ShowLikes from './components/likes/ShowLikes'
 
 class App extends Component {
   constructor (props) {
@@ -127,11 +128,15 @@ class App extends Component {
                 className='pic'
                 src={pic}
                 alt='Pic'
-                style={
-                  { float: 'left', margin: 0, padding: 0 }
-                }
+                style={{ float: 'left', margin: 0, padding: 0 }}
               />
             )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            exact
+            path='/likes'
+            render={() => <ShowLikes msgAlert={this.msgAlert} user={user} />}
           />
         </main>
       </Fragment>

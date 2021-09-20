@@ -6,6 +6,8 @@ import { withRouter } from 'react-router-dom'
 import { Card, Button } from 'react-bootstrap'
 import { Image } from 'cloudinary-react'
 
+import { likeProfiles } from '../../api/likes'
+
 class IndexProfile extends Component {
   constructor (props) {
     super(props)
@@ -38,6 +40,33 @@ class IndexProfile extends Component {
       )
   }
 
+  handleClick = (event) => {
+    event.preventDefault()
+    const { user, msgAlert } = this.props
+    // const { profiles } = this.state
+    // console.log('These are profiles', profiles)
+    // console.log('This is the user', user)
+    const profileData = {
+      profile_id: event.target.attributes.getNamedItem('data-profile').value,
+      user_id: event.target.attributes.getNamedItem('data-user').value
+    }
+    likeProfiles(profileData, user, msgAlert)
+      .then(() =>
+        msgAlert({
+          heading: 'Liked',
+          message: 'You have liked this profile.',
+          variant: 'success'
+        })
+      )
+      .catch((err) =>
+        msgAlert({
+          heading: 'Like failed :(',
+          message: 'Something went wrong: ' + err.message,
+          variant: 'danger'
+        })
+      )
+  }
+
   render () {
 	  const cardContainerLayout = {
 	    display: 'flex',
@@ -45,6 +74,7 @@ class IndexProfile extends Component {
 	    flexFlow: 'row wrap'
 	  }
 	  const { profiles } = this.state
+    // console.log('THESE are profiles', profiles)
 	  // This is what prevents the "cannot read property map of undefined" or other similar errors because on the first render, `profiles` state will be `null`
 	  if (profiles === '') {
 	    return 'Loading...'
@@ -67,11 +97,17 @@ class IndexProfile extends Component {
             />
             <Card.Text>{profile.age}</Card.Text>
             <Card.Text>{profile.breed}</Card.Text>
+            <Card.Text>{profile.liked_profiles}</Card.Text>
             <Card.Text style={{ fontFamily: 'Satisfy', fontSize: '25px' }}>
               {profile.bio}
             </Card.Text>
-            <Button variant='success'>Purr</Button>
-            <Button variant='dark'>Hiss</Button>
+            <Button
+              variant='success'
+              onClick={this.handleClick}
+              data-profile={profile.id}
+              data-user={profile.owner}>
+							Purr
+            </Button>
           </Card.Body>
         </Card>
       ))

@@ -8,7 +8,6 @@ export const createProfile = (profile, user) => {
     url: apiUrl + '/userprofile/',
     method: 'POST',
     headers: {
-      'content-type': 'multipart/form-data',
       Authorization: `Token ${user.token}`
     },
     data: {
@@ -16,8 +15,7 @@ export const createProfile = (profile, user) => {
         name: profile.name,
         age: profile.age,
         breed: profile.breed,
-        bio: profile.bio,
-        images: profile.images
+        bio: profile.bio
       }
     }
   })

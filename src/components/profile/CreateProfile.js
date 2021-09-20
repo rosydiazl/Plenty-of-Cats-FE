@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
 // import axios from 'axios'
-// import axios from 'axios'
 import { createProfile } from '../../api/profile'
 
 import Form from 'react-bootstrap/Form'
@@ -18,7 +17,8 @@ class CreateProfile extends Component {
       name: '',
       age: '',
       breed: '',
-      bio: ''
+      bio: '',
+      images: ''
     }
   }
 
@@ -37,7 +37,7 @@ class CreateProfile extends Component {
 
 	  createProfile(this.state, user)
 	    .then((res) => {
-	     // console.log('Res data is', res.data)
+	      // console.log('Res data is', res.data)
 	    })
 	    .then(() =>
 	      msgAlert({
