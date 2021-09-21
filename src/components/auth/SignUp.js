@@ -56,7 +56,7 @@ render () {
   return (
     <div className='row'>
       <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-        <h3>SIGN UP</h3>
+        <h3>Sign up</h3>
         <Form onSubmit={this.onSignUp}>
           <Form.Group controlId='email'>
             <Form.Control
@@ -91,7 +91,7 @@ render () {
               onChange={this.handleChange}
             />
           </Form.Group>
-          <Button variant='primary' type='submit'>
+          <Button variant='dark' type='submit'>
 						Submit
           </Button>
         </Form>
