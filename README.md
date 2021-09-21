@@ -16,9 +16,9 @@ Users can also change their passwords and sign out.
 
 ## Link to deployed sites
 
-GitHub
+[Front end deployed](https://rosydiazl.github.io/Plenty-of-Cats-FE/)
 
-Heroku
+[Back end deployed - Heroku](https://uniqueplentyofcats.herokuapp.com/)
 
 ## Technologies used
 
