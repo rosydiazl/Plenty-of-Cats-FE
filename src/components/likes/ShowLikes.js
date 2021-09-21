@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import { showLikes, removeLike } from '../../api/likes'
 import { withRouter } from 'react-router-dom'
 import { Card, Button } from 'react-bootstrap'
+import { Image } from 'cloudinary-react'
 
 class ShowLikes extends Component {
   constructor (props) {
@@ -88,8 +89,16 @@ class ShowLikes extends Component {
 	    likesJsx = this.state.likes.map((like) => (
 	      <Card key={like.id} style={{ width: '18rem', marginTop: '40px' }}>
 	        <Card.Body>
-	          <Card.Title>Profile ID {like.profile_id}</Card.Title>
-	          <Card.Text>User ID {like.user_id}</Card.Text>
+	          <Card.Title>{like.name}</Card.Title>
+	          <Image
+	            cloudName='doz8kotw7'
+	            style={{ objectFit: 'cover' }}
+	            height='191'
+	            publicId='https://res.cloudinary.com/doz8kotw7/image/upload/v1631985746/jqaomhzzofunvjn6jzt4.jpg'
+	          />
+	          <Card.Text>{like.age} years old</Card.Text>
+	          <Card.Text>{like.breed}</Card.Text>
+	          <Card.Text>{like.bio}</Card.Text>
 	          <Button
 	            variant='danger'
 	            data-id={like.id}
