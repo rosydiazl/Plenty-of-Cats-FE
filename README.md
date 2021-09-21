@@ -102,6 +102,16 @@ In regards to my problem-solving strategy, I used a rubber duck to explain to it
 
 ## Screenshot of the app
 
+[Plenty of Cats app screenshot 1](https://imgur.com/gtT5wAy)
+
+[Plenty of Cats app screenshot 2](https://imgur.com/V466TZ1)
+
+[Plenty of Cats app screenshot 3](https://imgur.com/qZK2Kno)
+
+[Plenty of Cats app screenshot 4](https://imgur.com/puE1qtn)
+
+[Plenty of Cats app screenshot 5](https://imgur.com/t4VnwQW)
+
 ## Problems to be solved in future iterations
 
 In future iterations, users will be able to:
