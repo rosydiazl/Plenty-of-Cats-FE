@@ -106,6 +106,15 @@ In regards to my problem-solving strategy, I used a rubber duck to explain to it
 
 ## Installation instructions
 
+1. Fork and clone the repository
+2. CD into the project and run 'git init'
+3. Empty the README and fill with your own content
+4. Replace plenty-of-cats in package.json with your project's name.
+5. Replace the 'homepage' field in package.json with your GitHub account name and repository.
+6. Install dependencies with 'npm install'
+7. 'git add' and 'git commit' your changes.
+8. Run the development server with 'npm start'
+
 ## Problems to be solved in future iterations
 
 In future iterations, users will be able to:
