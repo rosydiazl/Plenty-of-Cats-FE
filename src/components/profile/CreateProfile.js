@@ -86,25 +86,15 @@ class CreateProfile extends Component {
 	            />
 	          </Form.Group>
 	          <Form.Group controlId='breed'>
-	            <Form.Select
-	              aria-label='Default select example'
+	            <Form.Control
 	              required
 	              name='breed'
 	              value={this.state.breed}
+	              type='text'
+	              placeholder='Breed'
 	              style={{ marginBottom: '10px' }}
-	              onChange={this.handleChange}>
-	              <option>Breed</option>
-	              <option value='1'>Russian Blue</option>
-	              <option value='2'>Persian Cat</option>
-	              <option value='3'>Ragdoll</option>
-	              <option value='4'>Begal Cat</option>
-	              <option value='5'>Birman</option>
-	              <option value='6'>Siberian Cat</option>
-	              <option value='7'>Bombay Cat</option>
-	              <option value='8'>Korat Cat</option>
-	              <option value='9'>Thai Cat</option>
-	              <option value='10'>Sphynx Cat</option>
-	            </Form.Select>
+	              onChange={this.handleChange}
+	            />
 	          </Form.Group>
 	          <Form.Group controlId='bio'>
 	            <Form.Control
