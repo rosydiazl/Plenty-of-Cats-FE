@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Plenty-of-Cats-FE/static/css/main.ee7d5545.chunk.css",
-    "main.js": "/Plenty-of-Cats-FE/static/js/main.00900410.chunk.js",
-    "main.js.map": "/Plenty-of-Cats-FE/static/js/main.00900410.chunk.js.map",
+    "main.js": "/Plenty-of-Cats-FE/static/js/main.7618c230.chunk.js",
+    "main.js.map": "/Plenty-of-Cats-FE/static/js/main.7618c230.chunk.js.map",
     "runtime-main.js": "/Plenty-of-Cats-FE/static/js/runtime-main.43e82fc3.js",
     "runtime-main.js.map": "/Plenty-of-Cats-FE/static/js/runtime-main.43e82fc3.js.map",
     "static/js/2.32a6d13f.chunk.js": "/Plenty-of-Cats-FE/static/js/2.32a6d13f.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.43e82fc3.js",
     "static/js/2.32a6d13f.chunk.js",
     "static/css/main.ee7d5545.chunk.css",
-    "static/js/main.00900410.chunk.js"
+    "static/js/main.7618c230.chunk.js"
   ]
 }
