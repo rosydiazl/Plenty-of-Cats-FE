@@ -91,7 +91,9 @@ class ShowProfile extends Component {
 	    profileJsx = this.state.userprofile.map((profile) => (
 	      <Card key={profile.id} style={{ width: '18rem', marginTop: '40px' }}>
 	        <Card.Body>
-	          <Card.Title>{profile.name}</Card.Title>
+	          <Card.Title>
+	            <strong>{profile.name}</strong>
+	          </Card.Title>
 	          <Image
 	            style={{ width: 257 }}
 	            cloudName='doz8kotw7'

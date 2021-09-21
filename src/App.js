@@ -124,12 +124,14 @@ class App extends Component {
             exact
             path='/'
             render={() => (
-              <img
-                className='pic'
-                src={pic}
-                alt='Pic'
-                style={{ float: 'left', margin: 0, padding: 0 }}
-              />
+              <div>
+                <img
+                  className='pic'
+                  src={pic}
+                  alt='Pic'
+                  style={{ float: 'center', marginTop: 0, padding: 0 }}
+                />
+              </div>
             )}
           />
           <AuthenticatedRoute

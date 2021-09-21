@@ -91,9 +91,16 @@ class IndexProfile extends Component {
 	    // I want movieJsx to be a bunch of li or Link or something with all my movies info in them
 	    // .map gives us back a new array that we can display
 	    profileJsx = this.state.profiles.map((profile) => (
-        <Card key={profile.id} style={{ width: '18rem', marginTop: '40px' }}>
+        <Card
+          key={profile.id}
+          style={{
+            width: '18rem',
+            marginTop: '5px'
+          }}>
           <Card.Body>
-            <Card.Title>{profile.name}</Card.Title>
+            <Card.Title>
+              <strong>{profile.name}</strong>
+            </Card.Title>
             <Image
               cloudName='doz8kotw7'
               style={{ objectFit: 'cover' }}
@@ -113,15 +120,25 @@ class IndexProfile extends Component {
               data-breed={profile.breed}
               data-bio={profile.bio}
               data-profile={profile.id}
-              data-user={profile.owner}>
-							Purr
+              data-user={profile.owner}
+              style={{ paddingRight: '200px', alignContent: 'center' }}>
+							PURR
             </Button>
           </Card.Body>
         </Card>
       ))
 	  }
 
-	  return <div style={cardContainerLayout}>{profileJsx}</div>
+	  return (
+      <>
+        <div className='text' style={{ textAlign: 'center' }}>
+          <h4>
+            <strong>Like some profiles and see them in your Purrs!</strong>
+          </h4>
+        </div>
+        <div style={cardContainerLayout}>{profileJsx}</div>
+      </>
+    )
   }
 }
 export default withRouter(IndexProfile)

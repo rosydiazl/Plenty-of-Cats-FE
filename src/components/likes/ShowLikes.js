@@ -87,9 +87,11 @@ class ShowLikes extends Component {
 	    // I want movieJsx to be a bunch of li or Link or something with all my movies info in them
 	    // .map gives us back a new array that we can display
 	    likesJsx = this.state.likes.map((like) => (
-	      <Card key={like.id} style={{ width: '18rem', marginTop: '40px' }}>
+	      <Card key={like.id} style={{ width: '18rem', marginTop: '5px' }}>
 	        <Card.Body>
-	          <Card.Title>{like.name}</Card.Title>
+	          <Card.Title>
+	            <strong>{like.name}</strong>
+	          </Card.Title>
 	          <Image
 	            cloudName='doz8kotw7'
 	            style={{ objectFit: 'cover' }}
@@ -98,12 +100,15 @@ class ShowLikes extends Component {
 	          />
 	          <Card.Text>{like.age} years old</Card.Text>
 	          <Card.Text>{like.breed}</Card.Text>
-	          <Card.Text>{like.bio}</Card.Text>
+	          <Card.Text style={{ fontFamily: 'Satisfy', fontSize: '25px' }}>
+	            {like.bio}
+	          </Card.Text>
 	          <Button
-	            variant='danger'
+	            variant='dark'
 	            data-id={like.id}
-	            onClick={this.handleClick}>
-							Hiss
+	            onClick={this.handleClick}
+	            style={{ paddingRight: '200px', alignItems: 'center' }}>
+							HISS
 	          </Button>
 	        </Card.Body>
 	      </Card>
