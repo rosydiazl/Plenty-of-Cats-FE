@@ -102,7 +102,14 @@ In regards to my problem-solving strategy, I used a rubber duck to explain to it
 
 ## Screenshot of the app
 
-## Set up instructions 
+## Problems to be solved in future iterations
+
+In future iterations, users will be able to:
+
+1. Upload their own pictures when they're creating a profile and see it displayed on the Bootstrap Card.
+2. 'Match' with other users when they both 'like' each other. 
+3. Chat with their matches (using Socket)
+
 
 ## Installation instructions
 
@@ -114,11 +121,3 @@ In regards to my problem-solving strategy, I used a rubber duck to explain to it
 6. Install dependencies with 'npm install'
 7. 'git add' and 'git commit' your changes.
 8. Run the development server with 'npm start'
-
-## Problems to be solved in future iterations
-
-In future iterations, users will be able to:
-
-1. Upload their own pictures when they're creating a profile and see it displayed on the Bootstrap Card.
-2. 'Match' with other users when they both 'like' each other. 
-3. Chat with their matches (using Socket)
