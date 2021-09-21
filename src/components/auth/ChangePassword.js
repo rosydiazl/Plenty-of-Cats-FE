@@ -1,3 +1,4 @@
+/* eslint-disable no-tabs */
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
@@ -55,28 +56,30 @@ render () {
         <h3>Change Password</h3>
         <Form onSubmit={this.onChangePassword}>
           <Form.Group controlId='oldPassword'>
-            <Form.Label>Old password</Form.Label>
             <Form.Control
               required
               name='oldPassword'
               value={oldPassword}
               type='password'
               placeholder='Old Password'
+              style={{ marginBottom: '20px' }}
               onChange={this.handleChange}
             />
           </Form.Group>
           <Form.Group controlId='newPassword'>
-            <Form.Label>New Password</Form.Label>
             <Form.Control
               required
               name='newPassword'
               value={newPassword}
               type='password'
               placeholder='New Password'
+              style={{ marginBottom: '20px' }}
               onChange={this.handleChange}
             />
           </Form.Group>
-          <Button variant='primary' type='submit'>Submit</Button>
+          <Button variant='dark' type='submit'>
+						Submit
+          </Button>
         </Form>
       </div>
     </div>
