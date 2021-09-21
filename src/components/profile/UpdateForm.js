@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 const UpdateForm = ({ profile, handleSubmit, handleChange }) => (
   <div className='row'>
-	      <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+    <div className='col-sm-10 col-md-8 mx-auto mt-5'>
       <h3>Update Profile</h3>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId='name'>
@@ -32,25 +32,15 @@ const UpdateForm = ({ profile, handleSubmit, handleChange }) => (
           />
         </Form.Group>
         <Form.Group controlId='breed'>
-          <Form.Select
-            aria-label='Default select example'
+          <Form.Control
             required
             name='breed'
             value={profile.breed}
+            type='text'
+            placeholder='Breed'
             style={{ marginBottom: '10px' }}
-            onChange={handleChange}>
-            <option>Breed</option>
-            <option value='1'>Russian Blue</option>
-            <option value='2'>Persian Cat</option>
-            <option value='3'>Ragdoll</option>
-            <option value='4'>Begal Cat</option>
-            <option value='5'>Birman</option>
-            <option value='6'>Siberian Cat</option>
-            <option value='7'>Bombay Cat</option>
-            <option value='8'>Korat Cat</option>
-            <option value='9'>Thai Cat</option>
-            <option value='10'>Sphynx Cat</option>
-          </Form.Select>
+            onChange={handleChange}
+          />
         </Form.Group>
         <Form.Group controlId='bio'>
           <Form.Control
@@ -64,7 +54,7 @@ const UpdateForm = ({ profile, handleSubmit, handleChange }) => (
           />
         </Form.Group>
         <Button variant='primary' type='submit'>
-			Submit
+					Submit
         </Button>
       </Form>
     </div>

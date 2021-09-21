@@ -97,7 +97,7 @@ class ShowProfile extends Component {
 	            cloudName='doz8kotw7'
 	            publicId='https://res.cloudinary.com/doz8kotw7/image/upload/v1631985746/jqaomhzzofunvjn6jzt4.jpg'
 	          />
-	          <Card.Text>{profile.age}</Card.Text>
+	          <Card.Text>{profile.age} years old</Card.Text>
 	          <Card.Text>{profile.breed}</Card.Text>
 	          <Card.Text style={{ fontFamily: 'Satisfy', fontSize: '25px' }}>
 	            {profile.bio}
