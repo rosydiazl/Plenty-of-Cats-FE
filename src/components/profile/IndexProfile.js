@@ -47,6 +47,10 @@ class IndexProfile extends Component {
     // console.log('These are profiles', profiles)
     // console.log('This is the user', user)
     const profileData = {
+      name: event.target.attributes.getNamedItem('data-name').value,
+      age: event.target.attributes.getNamedItem('data-age').value,
+      breed: event.target.attributes.getNamedItem('data-breed').value,
+      bio: event.target.attributes.getNamedItem('data-bio').value,
       profile_id: event.target.attributes.getNamedItem('data-profile').value,
       user_id: event.target.attributes.getNamedItem('data-user').value
     }
@@ -91,19 +95,23 @@ class IndexProfile extends Component {
           <Card.Body>
             <Card.Title>{profile.name}</Card.Title>
             <Image
-              style={{ width: 257 }}
               cloudName='doz8kotw7'
+              style={{ objectFit: 'cover' }}
+              height='191'
               publicId='https://res.cloudinary.com/doz8kotw7/image/upload/v1631985746/jqaomhzzofunvjn6jzt4.jpg'
             />
-            <Card.Text>{profile.age}</Card.Text>
+            <Card.Text>{profile.age} years old</Card.Text>
             <Card.Text>{profile.breed}</Card.Text>
-            <Card.Text>{profile.liked_profiles}</Card.Text>
             <Card.Text style={{ fontFamily: 'Satisfy', fontSize: '25px' }}>
               {profile.bio}
             </Card.Text>
             <Button
               variant='success'
               onClick={this.handleClick}
+              data-name={profile.name}
+              data-age={profile.age}
+              data-breed={profile.breed}
+              data-bio={profile.bio}
               data-profile={profile.id}
               data-user={profile.owner}>
 							Purr
