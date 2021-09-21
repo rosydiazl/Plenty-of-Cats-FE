@@ -53,7 +53,7 @@ const UpdateForm = ({ profile, handleSubmit, handleChange }) => (
             onChange={handleChange}
           />
         </Form.Group>
-        <Button variant='primary' type='submit'>
+        <Button variant='dark' type='submit'>
 					Submit
         </Button>
       </Form>
