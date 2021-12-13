@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Plenty-of-Cats-FE/static/css/main.9f33c252.chunk.css",
+    "main.css": "/Plenty-of-Cats-FE/static/css/main.6cda8d30.chunk.css",
     "main.js": "/Plenty-of-Cats-FE/static/js/main.fbc32dc3.chunk.js",
     "main.js.map": "/Plenty-of-Cats-FE/static/js/main.fbc32dc3.chunk.js.map",
     "runtime-main.js": "/Plenty-of-Cats-FE/static/js/runtime-main.43e82fc3.js",
@@ -8,14 +8,14 @@
     "static/js/2.115fdcfc.chunk.js": "/Plenty-of-Cats-FE/static/js/2.115fdcfc.chunk.js",
     "static/js/2.115fdcfc.chunk.js.map": "/Plenty-of-Cats-FE/static/js/2.115fdcfc.chunk.js.map",
     "index.html": "/Plenty-of-Cats-FE/index.html",
-    "static/css/main.9f33c252.chunk.css.map": "/Plenty-of-Cats-FE/static/css/main.9f33c252.chunk.css.map",
+    "static/css/main.6cda8d30.chunk.css.map": "/Plenty-of-Cats-FE/static/css/main.6cda8d30.chunk.css.map",
     "static/js/2.115fdcfc.chunk.js.LICENSE.txt": "/Plenty-of-Cats-FE/static/js/2.115fdcfc.chunk.js.LICENSE.txt",
     "static/media/newpic.ac12327d.png": "/Plenty-of-Cats-FE/static/media/newpic.ac12327d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.43e82fc3.js",
     "static/js/2.115fdcfc.chunk.js",
-    "static/css/main.9f33c252.chunk.css",
+    "static/css/main.6cda8d30.chunk.css",
     "static/js/main.fbc32dc3.chunk.js"
   ]
 }
