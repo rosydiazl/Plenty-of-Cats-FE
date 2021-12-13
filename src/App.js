@@ -14,7 +14,8 @@ import CreateProfile from './components/profile/CreateProfile'
 import IndexProfile from './components/profile/IndexProfile'
 import ShowProfile from './components/profile/ShowProfile'
 import UpdateProfile from './components/profile/UpdateProfile'
-import pic from './pic.webp'
+// import pic from './pic.webp'
+import newpic from './newpic.png'
 import ShowLikes from './components/likes/ShowLikes'
 
 class App extends Component {
@@ -127,9 +128,9 @@ class App extends Component {
               <div>
                 <img
                   className='pic'
-                  src={pic}
+                  src={newpic}
                   alt='Pic'
-                  style={{ float: 'center', marginTop: 0, padding: 0 }}
+                  style={{ width: '40%' }}
                 />
               </div>
             )}
