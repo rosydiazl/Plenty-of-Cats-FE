@@ -135,6 +135,15 @@ class App extends Component {
               </div>
             )}
           />
+          {/* <Route
+            exact
+            path='/'
+            render={() => (
+              <div className='subtext'>
+                <h1>Meet interesting cats nearby.</h1>
+              </div>
+            )}
+          /> */}
           <AuthenticatedRoute
             user={user}
             exact
