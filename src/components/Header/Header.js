@@ -37,10 +37,10 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-  <Navbar bg='dark' variant='dark' expand='md'>
+  <Navbar id='navbar' variant='light' expand='md'>
     <Navbar.Brand>
-      <Link to='/' style={{ color: '#FFF', textDecoration: 'none', fontFamily: 'Montserrat', paddingLeft: '20px' }}>
-				Plenty of Cats
+      <Link to='/' style={{ color: '#fff', textDecoration: 'none', fontFamily: 'Ubuntu', paddingLeft: '20px', fontSize: '2.5rem' }}>
+				plenty of cats
       </Link>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls='basic-navbar-nav' />
