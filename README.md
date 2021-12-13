@@ -6,7 +6,7 @@ In this app, users can register for an account if they don't have one and login 
 
 After creating their account, users are able to update it or delete it if they please. Users are also able to 'purr'(or like) other cats' profiles. They can see their likes on the 'Purr' section.
 
-Users can also change their passwords and sign out.
+Users can also change their passwords and sign out...
 
 ## Link to repositories
 
